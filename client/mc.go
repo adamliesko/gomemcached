@@ -11,9 +11,6 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/couchbase/gomemcached"
-	"github.com/couchbase/goutils/logging"
-	"golang.org/x/crypto/pbkdf2"
 	"hash"
 	"io"
 	"math"
@@ -23,6 +20,10 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/adamliesko/gomemcached"
+	"github.com/couchbase/goutils/logging"
+	"golang.org/x/crypto/pbkdf2"
 )
 
 // authentication mechanisms

@@ -1,6 +1,6 @@
 // Package mcdebug provides memcached client op statistics via expvar.
 //
-// Usage:   import _ "github.com/couchbase/gomemcached/debug"
+// Usage:   import _ "github.com/adamliesko/gomemcached/debug"
 package mcdebug
 
 import (
@@ -8,8 +8,8 @@ import (
 	"expvar"
 	"sync/atomic"
 
-	"github.com/couchbase/gomemcached"
-	"github.com/couchbase/gomemcached/client"
+	"github.com/adamliesko/gomemcached"
+	"github.com/adamliesko/gomemcached/client"
 )
 
 type mcops struct {

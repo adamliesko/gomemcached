@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/binary"
-	"github.com/couchbase/gomemcached"
+	"github.com/adamliesko/gomemcached"
 	"github.com/couchbase/goutils/logging"
 )
 

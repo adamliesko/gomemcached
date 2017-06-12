@@ -6,8 +6,8 @@ import (
 	"io"
 	"net"
 
-	"github.com/couchbase/gomemcached"
-	"github.com/couchbase/gomemcached/server"
+	"github.com/adamliesko/gomemcached"
+	"github.com/adamliesko/gomemcached/server"
 	"github.com/couchbase/goutils/logging"
 )
 

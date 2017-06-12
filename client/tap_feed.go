@@ -7,7 +7,7 @@ import (
 	"io"
 	"math"
 
-	"github.com/couchbase/gomemcached"
+	"github.com/adamliesko/gomemcached"
 	"github.com/couchbase/goutils/logging"
 )
 

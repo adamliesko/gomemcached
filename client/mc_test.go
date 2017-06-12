@@ -3,13 +3,14 @@ package memcached
 import (
 	"bufio"
 	"bytes"
+	"encoding/binary"
 	"io"
 	"io/ioutil"
 	"net"
 	"reflect"
 	"testing"
 
-	"github.com/couchbase/gomemcached"
+	"github.com/adamliesko/gomemcached"
 )
 
 func TestConnect(t *testing.T) {
@@ -146,7 +147,7 @@ func TestTransmitReqWithExtMeta(t *testing.T) {
 
 	// add length of extended metadata to the corresponding bytes in Extras
 	req.Extras = make([]byte, 30)
-	binary.BigEndian.PutUint32(req.Extras[28:30], len(ExtMetaStr))
+	binary.BigEndian.PutUint32(req.Extras[28:30], uint32(len(ExtMetaStr)))
 
 	// Verify nil transmit is OK
 	_, err := transmitRequest(nil, &req)
